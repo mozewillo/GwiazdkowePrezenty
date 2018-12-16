@@ -38,6 +38,14 @@ public class Worek {
         public boolean czyMiejsce(Prezent p){
             return (maksIle > ileMam && (zapełniony + p.wielkość()) <= pojemność);
         }
+
+        public Prezent pokażOstatniPrezent(){
+            if (zawartość.size() > 0 ){
+                return  zawartość.get(ileMam- 1);}
+               else {
+                   return null;
+            }
+        }
     
         @Override
         public String toString(){

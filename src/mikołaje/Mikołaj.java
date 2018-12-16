@@ -11,9 +11,9 @@ import gwiazdka.*;
  */
 abstract public class Mikołaj {
 
-    Worek worek;
-    private int maksIle;
-    private int pojemność;
+    protected Worek worek;
+    protected int maksIle;
+    protected int pojemność;
     
     public Mikołaj(int maksIle, int pojemność){
         this.maksIle= maksIle;

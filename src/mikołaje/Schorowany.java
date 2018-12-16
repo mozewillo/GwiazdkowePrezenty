@@ -19,8 +19,9 @@ public class Schorowany extends Mikołaj {
 
     @Override
     public boolean czyWeźmie (Prezent p){
-        Prezent a=super.worek().zawartość().get(super.worek().ileMam());
-        return ( a.waga()> p.waga() && super.czyMoże(p));
+
+        if(super.worek().pokażOstatniPrezent() == null && super.czyMoże(p)){return true ;}
+        else{ return ( super.worek().pokażOstatniPrezent().waga()> p.waga() && super.czyMoże(p)); }
     }
 
     @Override
